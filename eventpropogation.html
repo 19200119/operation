@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gd{
+            border: 2px solid blue;
+            height:300px;
+            width:300px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+
+        }
+        #pd{
+            border: 2px solid red;
+            height:200px;
+            width:200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #cd{
+            border: 2px solid black;
+            height:100px;
+            width:100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="gd">
+        <div id="pd">
+            <div id="cd">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let gd=document.getElementById("gd")
+        let pd=document.getElementById("pd")
+        let cd=document.getElementById("cd")
+
+        gd.addEventListener("click" ,(e)=>{
+            e.stopImmediatePropagation()
+            console.log("grant parent clicked");
+        })
+        pd.addEventListener("click" ,(e)=>{
+            e.stopImmediatePropagation()
+            console.log("parent clicked");
+        })
+        cd.addEventListener("click" ,(e)=>{
+            e.stopImmediatePropagation()
+            console.log("child clicked");
+        })
+
+    </script>
+</body>
+</html>
